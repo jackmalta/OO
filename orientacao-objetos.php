@@ -10,6 +10,4 @@ $x -> numero = "123";
 $x -> saldo = "1000";
 
 echo " Número da conta X: $x->numero \t Saldo: $x->saldo \n";
-
-
  ?>

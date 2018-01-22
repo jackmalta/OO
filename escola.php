@@ -11,6 +11,14 @@
     public $salario;
   }
 
+  class Turma
+  {
+    public $serie;
+    public $sigla;
+    public $tipoDeEnsino;
+    public $periodo;
+  }
+
 //Primeiro Aluno
   $Aluno1 = new Aluno();
   $Aluno1 -> nome = "Andy Bernard";

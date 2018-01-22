@@ -1,4 +1,7 @@
 <?php
+
+require 'Lib/Carbon.php';
+use Carbon\Carbon;
   class Cartao
   {
     public $numero;
@@ -20,30 +23,30 @@
 
 //Primeiro Cliente
   $cliente = new Cartao();
-  $cliente -> numero = "123456789";
-  $cliente -> dataDeValidade = "12/26";
+  $cliente->numero = 123456789;
+  $cliente->dataDeValidade = Carbon::createFromDate(2022, 03, 7, "GMT");
 
   $C1Conta = new Conta();
-  $C1Conta -> numero = "54187952";
-  $C1Conta -> saldo = "1500";
-  $C1Conta -> limite = "3000";
+  $C1Conta->numero = 54187952;
+  $C1Conta->saldo = 1500;
+  $C1Conta->limite = 3000;
 
   $clienteAg = new Agencia();
-  $clienteAg -> numero = "125";
+  $clienteAg->numero = 125;
 
 
 //Segundo Cliente
   $cliente2Ag = new Agencia();
-  $cliente2Ag -> numero = "124";
+  $cliente2Ag->numero = 124;
 
   $cliente2 = new Cartao();
-  $cliente2 -> numero = "987654321";
-  $cliente2 -> dataDeValidade = "10/22";
+  $cliente2->numero = 987654321;
+  $cliente2->dataDeValidade = Carbon::createFromDate(2026, 10, 01, "GMT");
 
   $C2Conta = new Conta();
-  $C2Conta -> numero = "36987451";
-  $C2Conta -> saldo = "70";
-  $C2Conta -> limite = "7000";
+  $C2Conta -> numero = 36987451;
+  $C2Conta -> saldo = 70;
+  $C2Conta -> limite = 7000;
 
 
   echo "O número de seu cartão é: $cliente->numero \n A validade é até: $cliente->dataDeValidade \nSua Agência é: $clienteAg->numero
