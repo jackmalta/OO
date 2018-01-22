@@ -1239,7 +1239,7 @@ class Carbon extends DateTime
      */
     public function toDateString()
     {
-        return $this->format('Y-m-d');
+        return $this->format('d/m/Y');
     }
 
     /**

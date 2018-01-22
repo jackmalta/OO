@@ -25,6 +25,7 @@ use Carbon\Carbon;
   $cliente = new Cartao();
   $cliente->numero = 123456789;
   $cliente->dataDeValidade = Carbon::createFromDate(2022, 03, 7, "GMT");
+  $teste = $cliente->dataDeValidade;
 
   $C1Conta = new Conta();
   $C1Conta->numero = 54187952;
@@ -42,6 +43,9 @@ use Carbon\Carbon;
   $cliente2 = new Cartao();
   $cliente2->numero = 987654321;
   $cliente2->dataDeValidade = Carbon::createFromDate(2026, 10, 01, "GMT");
+  $teste2 = $cliente2->dataDeValidade;
+
+
 
   $C2Conta = new Conta();
   $C2Conta -> numero = 36987451;
@@ -49,11 +53,14 @@ use Carbon\Carbon;
   $C2Conta -> limite = 7000;
 
 
-  echo "O número de seu cartão é: $cliente->numero \n A validade é até: $cliente->dataDeValidade \nSua Agência é: $clienteAg->numero
+
+//echo $teste->toDateString().PHP_EOL;
+
+  echo "O número de seu cartão é: $cliente->numero \n A validade é até: ".$teste->toDateString()." \nSua Agência é: $clienteAg->numero
   Os dados de sua conta \nNúmero: $C1Conta->numero \tSaldo: $C1Conta->saldo \tLimite: $C1Conta->limite  \n".PHP_EOL;
 
 
-  echo "O Cliente 2 tem o cartão de número: $cliente2->numero \ne a validade é até: $cliente2->dataDeValidade \nSua Aguência é: $cliente2Ag->numero
+  echo "O Cliente 2 tem o cartão de número: $cliente2->numero \ne a validade é até: ".$teste2->toDateString()." \nSua Aguência é: $cliente2Ag->numero
   Os dados de sua conta \nNúmero: $C2Conta->numero \tSaldo: $C2Conta->saldo \tLimite: $C2Conta->limite  ".PHP_EOL;
 
 
