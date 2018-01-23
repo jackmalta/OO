@@ -12,6 +12,7 @@
   }
     echo "Conexão Efetuada com sucesso";
 
+    if (!is_null($clientes->nome )) {
     $sql = "INSERT INTO Clientes (nome, email) VALUES ('$clientes->nome', '$clientes->email')";
 //CREATE TABLE Clientes(codigo INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(40) NOT NULL, email VARCHAR(40) NOT NULL)
     if ($conn->query($sql) === TRUE) {
@@ -19,6 +20,7 @@
     } else {
       echo "Erro!!!!";
     }
+  }
 
     $dat = "SELECT codigo, nome, email FROM Clientes";
     $exib = $conn->query($dat);
