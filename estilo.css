@@ -1,0 +1,24 @@
+ul {
+  list-style: none;
+  text-align: center;
+  }
+li {
+  width: 400px;;
+  background:#123;
+  margin: 20px;
+  border-radius: 15px 50px 15px 50px;
+}
+
+a {
+  color: Blue;
+  font-size: 2em;
+  display:inline-grid;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px;
+}
+a:hover {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+
+}
